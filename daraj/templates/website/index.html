@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">Rupesh<span>Dev</span></h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome to My Django Website 🚀</h1>
+        <p>
+            Learning Django step by step.<br>
+            Building real projects with clean code.
+        </p>
+
+        <a href="/about/" class="btn">Explore More</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Rupesh Yadav | Built with Django 💙</p>
+    </footer>
+
+</body>
+</html>

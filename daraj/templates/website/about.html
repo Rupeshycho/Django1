@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">Rupesh<span>Dev</span></h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <h1>About Me 👨‍💻</h1>
+        <p class="intro">
+            Hi, I’m <span>Rupesh Yadav</span>, a Computer Science student learning
+            Django and building real-world web applications.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>🎓 Student</h3>
+                <p>
+                    Studying Computer Science with AI and learning
+                    backend development using Django.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Skills</h3>
+                <p>
+                    Python, Django, HTML, CSS, Java basics,
+                    and problem-solving mindset.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Goal</h3>
+                <p>
+                    To become a skilled backend developer and
+                    build impactful software solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Rupesh Yadav | About Page 💙</p>
+    </footer>
+
+</body>
+</html>
