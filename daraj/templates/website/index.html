@@ -1,42 +1,35 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Django Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home Page{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <h2 class="logo">Rupesh<span>Dev</span></h2>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
-    </nav>
-
+    {% block extra_css %}
+<link rel="stylesheet" href="{% static 'daraj/css/index.css' %}">
+{% endblock %}
+   {% block content %}
     <!-- HERO SECTION -->
     <section class="hero">
+    <div class="hero-content">
         <h1>Welcome to My Django Website 🚀</h1>
-        <p>
+
+        <p class="subtitle">
             Learning Django step by step.<br>
-            Building real projects with clean code.
+            Building real projects with clean, scalable code.
         </p>
 
-        <a href="/about/" class="btn">Explore More</a>
-    </section>
+        <p class="description">
+            This website is a learning journey where I practice Django,
+            improve backend skills, and design simple, user-friendly pages.
+        </p>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Rupesh Yadav | Built with Django 💙</p>
-    </footer>
+        <div class="hero-buttons">
+            <a href="/about/" class="btn primary">Explore More</a>
+            <a href="/contact/" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+
+    {% endblock %}
+
+

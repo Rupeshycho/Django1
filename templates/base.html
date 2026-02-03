@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+ 
+{% block extra_css %}{% endblock %}
+{% block extra_js %}{% endblock %}
+
+
+
+</head>
+<body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <nav class="navbar">
+        <h2 class="logo">dj<span>.Rupesh</span></h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 Rupesh Yadav | Django 💙</p>
+    </footer>
+
+</body>
+</html>

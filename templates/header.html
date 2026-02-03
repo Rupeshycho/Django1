@@ -1,0 +1,27 @@
+{% load static %}
+
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="{% url 'home' %}" class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" height="50">
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">🏠Home</a></li>
+                <li><a href="{% url 'about' %}">👪About</a></li>
+                <li><a href="{% url 'contact' %}">📞Contact</a></li>
+                <!-- Add more links if needed -->
+            </ul>
+
+            <!-- Optional: Mobile Menu Icon -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
