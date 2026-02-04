@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'daraj/css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="about-section">
+    <div class="about-wrapper" style="margin-top: 100px;">
+
+        <!-- Text Content -->
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p class="intro">
+                We are a small team of passionate learners and creators who love building clean,
+                simple, and useful websites.
+            </p>
+
+            <p>
+                This website is part of our journey into web development, where we explore
+                modern design, responsive layouts, and real-world project building using
+                HTML, CSS, Django, and more.
+            </p>
+
+            <p>
+                Our goal is to learn by doing, collaborate as a team, and create websites
+                that are easy to use and visually appealing.
+            </p>
+
+            <ul class="about-points" style="color: black; font-weight: bold; font-family: itallic; ">
+                <li>💻 Learning web development step by step</li>
+                <li>🤝 Working together as a team</li>
+                <li>🚀 Building real projects for practice</li>
+            </ul>
+        </div>
+
+        <!-- Image -->
+        <div class="about-image" style=" border: 1.5px solid white; border-radius: 10px; border-shadow: 0 6px 15px black; ">
+            <img src="{% static 'daraj/images/about.jpg' %}" alt="Our team selfie">
+            <p class="caption">"Our team <br>– learning | building | growing > together"</p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

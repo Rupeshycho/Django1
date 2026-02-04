@@ -1,0 +1,92 @@
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9ff;
+}
+
+/* Layout */
+.about-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+/* Text side */
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: blue;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-content .intro {
+    font-weight: 500;
+}
+
+/* Points list */
+/* Points list */
+.about-points {
+    
+    list-style: none;
+    padding: 1.2rem 1.5rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0%;
+
+    border: 1px solid #dcdcff;        /* light border */
+    border-radius: 10px;              /* rounded corners */
+    background-color: #ffffff;        /* white card look */
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft shadow */
+}
+
+.about-points li {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    
+
+}
+
+/* Image side */
+.about-image {
+    flex: 0.5;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+}
+
+.about-image .caption {
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+    color: #18171b;
+    font-weight: bolder;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}

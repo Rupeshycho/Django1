@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+    <title>{% block title %}Home Page{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}
+<link rel="stylesheet" href="{% static 'daraj/css/index.css' %}">
+{% endblock %}
+   {% block content %}
+    <!-- HERO SECTION -->
+<section class="hero" >
+    <div class="hero-content" style="margin-top: 0px;" >
+        <h1>Welcome to My Django Website 🚀</h1>
+
+        <p class="subtitle">
+            Learning Django step by step.<br>
+            Building real projects with clean, scalable code.
+        </p>
+
+        <p class="description">
+            This website is a learning journey where I practice Django,
+            improve backend skills, and design simple, user-friendly pages.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/about/" class="btn primary">Explore More</a>
+            <a href="/contact/" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+
+    {% endblock %}
+
+

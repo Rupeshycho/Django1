@@ -1,0 +1,278 @@
+/* ===== Header / Navbar ===== */
+.navbar {
+    background-color: #186e8d; /* dark background */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;       /* sticky */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.navbar .logo span {
+    color: #faac8a; /* highlight for .Rupesh */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin-right: 30px;
+    padding: 0;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+    
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff;
+    
+
+}
+/* ===== Footer ===== */
+footer {
+    background-color: #126f7d;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0%;
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+/* ICON LINK */
+footer .social-links a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+
+    transition: 
+        transform 1s ease,
+        box-shadow 0.35s ease,
+        color 0.35s ease;
+}
+
+/* HOVER EFFECT */
+footer .social-links a:hover {
+    color: #ffffff;
+    transform: scale(1.5);
+    border-radius: 45%;
+    font-size: 28px;
+    
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(135deg, #1c1c3c, #1f4068, #162447);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    flex: 1;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+/* ===== FORM ===== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 12px #00d9ff;
+}
+
+/* ===== SEND BUTTON ===== */
+.contact-form button {
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    background: #00f0ff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.45);
+}
+
+/* BLUR OVERLAY */
+.blur-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 9999;
+}
+
+/* ACTIVE STATE */
+.blur-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* POPUP BOX */
+.popup-box {
+    background: #ffffff;
+    color: #1f2937;
+    padding: 30px 35px;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+
+    transform: scale(0.85) translateY(10px);
+    opacity: 0;
+
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* POPUP ANIMATION WHEN ACTIVE */
+.blur-overlay.show .popup-box {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* POPUP TEXT */
+.popup-box h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.popup-box p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+/* OK BUTTON */
+.popup-box button {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #00d9ff, #00b4d8);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.popup-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 217, 255, 0.45);
+}
+
